@@ -1,67 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueldos Anuales Brutos (Fuente: BOE)</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elecciones Bolivia 2025</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Rama principal */
+.branch {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 50px;
+}
+
+/* Línea vertical principal */
+.branch::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 0;
+    width: 3px;
+    background-color: #555;
+    border-radius: 2px;
+}
+
+/* Nodo individual */
+.node {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin: 10px 0;
+    position: relative;
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Línea horizontal tipo llave */
+.node::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 50px;
+    height: 3px;
+    background-color: #555;
+    border-radius: 2px;
+}
+
+/* Último nodo de cada rama no tiene línea horizontal */
+.node:last-child::before {
+    display: none;
+}
+
+/* Sub-ramas */
+.sub-branch {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 15px;
+    position: relative;
+}
+
+/* Línea vertical interna */
+.sub-branch::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #555;
+    border-radius: 2px;
+}
+
+/* Nodo hijo con llave */
+.sub-branch .node::before {
+    left: -50px;
+}
+
+/* Colores por categoría */
+.paz { border-left: 6px solid #27ae60; }
+.quiroga { border-left: 6px solid #c0392b; }
+.positivas { border-left: 6px solid #2980b9; }
+.negativas { border-left: 6px solid #d35400; }
+
+/* Texto destacado */
+.node strong {
+    font-size: 1.1em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .node, .sub-branch .node {
+        min-width: 180px;
+        padding: 10px 15px;
+    }
+    .branch { margin-left: 20px; }
+    .sub-branch { margin-left: 30px; }
+    .node::before, .sub-branch .node::before { left: -30px; width: 30px; }
+}
+</style>
 </head>
 <body>
-    <div class="background-overlay"></div> <div class="container">
-        <h1 data-aos="fade-down" data-aos-duration="1000">Histórico de Sueldos Anuales Brutos del Gobierno</h1>
-        <p class="important-note" data-aos="zoom-in" data-aos-delay="200">
-            <strong>Nota Importante:</strong> Los sueldos mostrados son <strong>ANUALES brutos</strong>, publicados en el Boletín Oficial del Estado (BOE) a través de las Leyes de Presupuestos Generales del Estado y Reales Decretos-ley de actualización salarial.
-            <br>El BOE no publica sueldos netos anuales, ya que estos dependen de circunstancias personales y fiscales individuales.
-        </p>
-        <p class="source-note" data-aos="fade-up" data-aos-delay="400">Fuente de los datos brutos anuales: Boletín Oficial del Estado (Leyes de Presupuestos Generales y RD-Leyes de actualización).</p>
 
-        <div class="chart-container" data-aos="fade-up" data-aos-delay="600">
-            <canvas id="sueldosChart"></canvas>
-            <div id="legend-container" class="chart-legend">
-                </div>
-        </div>
+<div class="container">
 
-        <div class="llm-feature-section" data-aos="fade-up" data-aos-delay="800">
-            <h2>✨ Análisis de Sueldo con IA ✨</h2>
-            <p>Introduce un sueldo anual bruto y un año para compararlo con los salarios del gobierno y obtener un análisis de la IA.</p>
-            <div class="input-group">
-                <label for="inputSalary">Sueldo a comparar (€):</label>
-                <input type="number" id="inputSalary" placeholder="Ej: 50000" min="0">
-            </div>
-            <div class="input-group">
-                <label for="inputYear">Año de referencia:</label>
-                <input type="number" id="inputYear" placeholder="Ej: 2023" min="2020" max="2025" value="2024">
-            </div>
-            <button id="compareButton">Comparar con Salarios del Gobierno</button>
-            <div id="llmResponse" class="llm-response">
-                <p>El análisis de la IA aparecerá aquí.</p>
-            </div>
-            <div id="llmLoading" class="llm-loading" style="display: none;">
-                Cargando análisis... <span class="spinner"></span>
-            </div>
-            <div id="llmErrorMessage" class="llm-error-message" style="display: none;">
-                ¡Oops! Hubo un problema. Inténtalo de nuevo.
-            </div>
+    <div class="branch paz">
+        <div class="node"><strong>Rodrigo Paz</strong></div>
+        <div class="sub-branch">
+            <div class="node">Reformas graduales</div>
+            <div class="node">Combate a la corrupción</div>
+            <div class="node">Rol del Estado eficiente</div>
+            <div class="node">Estilo dialogante → Transición tranquila</div>
         </div>
     </div>
 
-    <footer data-aos="fade-up" data-aos-delay="1000">
-        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-    </footer>
+    <div class="branch quiroga">
+        <div class="node"><strong>Tuto Quiroga</strong></div>
+        <div class="sub-branch">
+            <div class="node">Shock liberal inmediato</div>
+            <div class="node">Privatizaciones y menor rol del Estado</div>
+            <div class="node">Austeridad fiscal dura → Acuerdo con FMI</div>
+            <div class="node">Estilo combativo → Cambio rápido y radical</div>
+        </div>
+    </div>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true // Las animaciones solo se disparan una vez
-        });
-    </script>
+    <div class="branch positivas">
+        <div class="node"><strong>Consecuencias Positivas</strong></div>
+        <div class="sub-branch">
+            <div class="node">Baja inflación → Recuperación inversión</div>
+            <div class="node">Crecimiento económico → Integración internacional</div>
+        </div>
+    </div>
 
-    <script>
-        const labels = [];
-        const startYear = 2020;
+    <div class="branch negativas">
+        <div class="node"><strong>Consecuencias Negativas</strong></div>
+        <div class="sub-branch">
+            <div class="node">Aumento de precios → Impacto en consumo</div>
+            <div class="node">Desempleo → Posibles protestas</div>
+            <div class="node">Recorte programas sociales → Sectores vulnerables</div>
+        </div>
+    </div>
+
+    <div class="branch">
+        <div class="node"><strong>En síntesis</strong></div>
+        <div class="sub-branch">
+            <div class="node paz">Paz → Cambios moderados y negociados</div>
+            <div class="node quiroga">Quiroga → Shock liberal con alto costo inicial</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>        const startYear = 2020;
         const endYear = 2025;
 
         for (let year = startYear; year <= endYear; year++) {
@@ -397,3 +504,4 @@
     </script>
 </body>
 </html>
+
