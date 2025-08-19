@@ -1,282 +1,163 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elecciones en Bolivia 2025 — Esquema y Diagrama</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elecciones Bolivia 2025</title>
   <style>
-    :root{
-      --bg:#f6f8fb; --fg:#1f2937; --brand:#0a3d62; --muted:#6b7280; --card:#ffffff;
-      --ok:#10b981; --warn:#f59e0b; --danger:#ef4444; --info:#3b82f6;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1220; --fg:#e5e7eb; --brand:#7dd3fc; --muted:#9ca3af; --card:#0f172a; }
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--fg)}
-    header{background:var(--brand); color:#fff; padding:2rem 1rem; text-align:center}
-    header h1{margin:0 0 .25rem; font-size:clamp(1.6rem,2.5vw,2.2rem)}
-    header p{margin:.25rem 0 0; opacity:.9}
-    .container{max-width:1100px; margin:2rem auto; padding:0 1rem}
-    .toolbar{display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; margin-bottom:1rem}
-    .btn{border:1px solid transparent; background:var(--card); color:var(--fg); padding:.6rem .9rem; border-radius:999px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,.08)}
-    .btn[aria-pressed="true"]{border-color:var(--brand)}
-    section.card{background:var(--card); border-radius:14px; padding:1rem 1.2rem; box-shadow:0 6px 24px rgba(0,0,0,.08); margin-bottom:1rem}
-    h2{display:flex; align-items:center; gap:.5rem; font-size:1.15rem; color:var(--brand); margin:.25rem 0 .75rem; cursor:pointer}
-    h3{margin:.75rem 0 .25rem}
-    ul{margin:.25rem 0 .5rem 1.1rem; line-height:1.6}
-    .hidden{display:none}
-    footer{margin:2rem 0 0; background:var(--brand); color:#fff; text-align:center; padding:1rem}
-
-    /* SVG wrapper */
-    .diagram-wrap{background:var(--card); border-radius:14px; box-shadow:0 6px 24px rgba(0,0,0,.08); padding:1rem; overflow:auto}
-    .diagram{width:100%; height:auto; max-height:80vh; display:block}
-    .legend{display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin:.75rem 0 0; font-size:.9rem; color:var(--muted)}
-    .dot{width:.8rem; height:.8rem; border-radius:50%; display:inline-block; margin-right:.4rem}
-    .dot.ok{background:var(--ok)}
-    .dot.warn{background:var(--warn)}
-    .dot.danger{background:var(--danger)}
-    .dot.info{background:var(--info)}
-
-    /* Collapsible content animation */
-    .collapsible{overflow:hidden; transition:max-height .35s ease}
-    .chev{transition: transform .25s ease}
-    .rot{transform:rotate(90deg)}
-    /* Link style */
-    a.inline{color:var(--brand); text-decoration:none}
+    nav {
+      background: #00264d;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+      margin-top: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .diagram {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    footer {
+      background: #00264d;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🗳️ Elecciones en Bolivia 2025</h1>
-    <p>Resumen + diagrama con flechas y llaves (HTML + CSS + JS en un único archivo)</p>
-  </header>
+    <h1>Elecciones en Bolivia 2025</h1>
+    <p>Análisis y resumen de la situación política</p>
+  </header>  <nav>
+    <a href="#caida-mas">Caída del MAS</a>
+    <a href="#consecuencias">Consecuencias</a>
+    <a href="#segunda-vuelta">Segunda vuelta</a>
+    <a href="#conclusion">Conclusión</a>
+  </nav>  <main>
+    <section id="caida-mas">
+      <h2>🔻 Caída del MAS</h2>
+      <ul>
+        <li>20 años en el poder (Evo Morales + Luis Arce).</li>
+        <li>Crisis económica:
+          <ul>
+            <li>Déficit público: 14%.</li>
+            <li>Inflación: 25%.</li>
+            <li>Escasez de alimentos y combustibles.</li>
+          </ul>
+        </li>
+        <li>División interna: Morales vs. Arce.</li>
+        <li>Resultados:
+          <ul>
+            <li>Candidato MAS: 3,2% votos (de 75 diputados → solo 1).</li>
+            <li>Escisión "Alianza Popular": 8,2% votos + 5 diputados.</li>
+            <li>Voto nulo impulsado por Evo: 20%.</li>
+          </ul>
+        </li>
+        <li>Apoyo real izquierda radical-populista: ~30% (pero dividido).</li>
+      </ul>
+    </section><section id="consecuencias">
+  <h2>🟢 Consecuencias políticas</h2>
+  <ul>
+    <li>4 fuerzas no de izquierda controlan el 90% del Congreso.</li>
+    <li>Pueden reformar la Constitución de Evo Morales.</li>
+    <li>La izquierda queda irrelevante políticamente (aunque mantiene base social).</li>
+  </ul>
+</section>
 
-  <div class="container">
-    <div class="toolbar" role="tablist" aria-label="Vista">
-      <button class="btn" role="tab" aria-selected="true" aria-pressed="true" id="tab-diagrama">Ver diagrama</button>
-      <button class="btn" role="tab" aria-selected="false" aria-pressed="false" id="tab-esquema">Ver esquema en texto</button>
-    </div>
+<section id="segunda-vuelta">
+  <h2>⚖️ Segunda vuelta presidencial</h2>
+  <h3>Rodrigo Paz</h3>
+  <ul>
+    <li>Descentralización fiscal.</li>
+    <li>Bajar aranceles.</li>
+    <li>Amnistía fiscal + crecimiento económico para reducir déficit.</li>
+  </ul>
 
-    <!-- Diagrama SVG -->
-    <section class="diagram-wrap" id="panel-diagrama" role="tabpanel" aria-labelledby="tab-diagrama">
-      <svg class="diagram" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
-          </marker>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0%" stop-color="#e0f2fe" />
-            <stop offset="100%" stop-color="#fff" />
-          </linearGradient>
-          <linearGradient id="g2" x1="0" x2="1">
-            <stop offset="0%" stop-color="#e2e8f0" />
-            <stop offset="100%" stop-color="#fff" />
-          </linearGradient>
-          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15" />
-          </filter>
-        </defs>
+  <h3>Jorge Quiroga</h3>
+  <ul>
+    <li>Recorte directo del gasto público.</li>
+    <li>Modelo similar a Milei en Argentina.</li>
+    <li>Libre comercio mundial (incluso salir del Mercosur).</li>
+    <li>Privatización de empresas públicas.</li>
+  </ul>
+</section>
 
-        <!-- Título del diagrama -->
-        <text x="600" y="40" text-anchor="middle" font-size="24" fill="currentColor">Panorama electoral y económico</text>
+<section id="conclusion">
+  <h2>📌 Conclusión</h2>
+  <p>
+    Bolivia vive una oportunidad histórica para modernizarse. Si la nueva oposición fracasa, 
+    el MAS y la izquierda radical podrían volver con fuerza en el futuro.
+  </p>
+</section>
 
-        <!-- Bloque: 20 años MAS -->
-        <g transform="translate(60,80)">
-          <rect width="340" height="120" rx="14" fill="url(#g1)" stroke="currentColor" filter="url(#shadow)" />
-          <text x="170" y="32" text-anchor="middle" font-size="18" fill="currentColor">20 años de gobiernos del MAS</text>
-          <text x="170" y="60" text-anchor="middle" font-size="14" fill="currentColor">Evo Morales (14) + Luis Arce (5)</text>
-        </g>
+<div class="diagram">
+  <svg width="800" height="400">
+    <!-- Nodo principal -->
+    <rect x="350" y="20" width="100" height="40" fill="#004080" rx="5" ry="5"/>
+    <text x="400" y="45" fill="white" font-size="14" text-anchor="middle">Elecciones 2025</text>
 
-        <!-- Bloque: Crisis económica -->
-        <g transform="translate(60,240)">
-          <rect width="340" height="200" rx="14" fill="url(#g2)" stroke="currentColor" filter="url(#shadow)" />
-          <text x="170" y="30" text-anchor="middle" font-size="18">Crisis económica</text>
-          <text x="20" y="70" font-size="14">• Déficit: 14%</text>
-          <text x="20" y="95" font-size="14">• Inflación interanual: 25%</text>
-          <text x="20" y="120" font-size="14">• Escasez: alimentos y combustibles</text>
-          <text x="20" y="145" font-size="14">• Luchas internas: Morales vs. Arce</text>
-        </g>
+    <!-- Flechas y bloques -->
+    <line x1="400" y1="60" x2="400" y2="100" stroke="#333" marker-end="url(#arrow)"/>
+    <rect x="280" y="100" width="240" height="60" fill="#e6f0ff" rx="5" ry="5"/>
+    <text x="400" y="135" text-anchor="middle">Caída del MAS</text>
 
-        <!-- Flecha de 20 años -> Crisis -->
-        <path d="M 230 200 L 230 235" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)" />
+    <line x1="400" y1="160" x2="400" y2="200" stroke="#333" marker-end="url(#arrow)"/>
+    <rect x="280" y="200" width="240" height="60" fill="#e6ffe6" rx="5" ry="5"/>
+    <text x="400" y="235" text-anchor="middle">Consecuencias políticas</text>
 
-        <!-- Bloque: Resultados MAS -->
-        <g transform="translate(460,80)">
-          <rect width="320" height="210" rx="14" fill="#fff" stroke="currentColor" filter="url(#shadow)" />
-          <text x="160" y="28" text-anchor="middle" font-size="18">Desplome electoral MAS</text>
-          <text x="20" y="60" font-size="14">• Candidato MAS: 3,2% votos</text>
-          <text x="20" y="85" font-size="14">• De 75 diputados → 1</text>
-          <text x="20" y="110" font-size="14">• Escisión Alianza Popular: 8,2% + 5 escaños</text>
-          <text x="20" y="135" font-size="14">• Voto nulo impulsado por Evo: 20%</text>
-          <text x="20" y="160" font-size="14">• Base izquierda radical ≈ 30% (fragmentada)</text>
-        </g>
+    <line x1="400" y1="260" x2="400" y2="300" stroke="#333" marker-end="url(#arrow)"/>
+    <rect x="280" y="300" width="240" height="60" fill="#fff0e6" rx="5" ry="5"/>
+    <text x="400" y="335" text-anchor="middle">Segunda vuelta</text>
 
-        <!-- Flecha Crisis -> Resultados -->
-        <path d="M 400 260 C 440 240, 460 190, 520 170" stroke="currentColor" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+    <!-- Definición de flecha -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+      </marker>
+    </defs>
+  </svg>
+</div>
 
-        <!-- Bloque: Congreso oposición -->
-        <g transform="translate(840,80)">
-          <rect width="300" height="150" rx="14" fill="#fff" stroke="currentColor" filter="url(#shadow)" />
-          <text x="150" y="30" text-anchor="middle" font-size="18">Nuevo equilibrio en Congreso</text>
-          <text x="20" y="65" font-size="14">• 4 fuerzas no de izquierda ≈ 90% de escaños</text>
-          <text x="20" y="90" font-size="14">• Pueden reformar la Constitución</text>
-        </g>
-
-        <!-- Flechas desde Resultados a Congreso -->
-        <path d="M 780 150 L 835 150" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)" />
-
-        <!-- Bloque: Segunda vuelta -->
-        <g transform="translate(460,330)">
-          <rect width="680" height="240" rx="14" fill="#fff" stroke="currentColor" filter="url(#shadow)" />
-          <text x="340" y="28" text-anchor="middle" font-size="18">Segunda vuelta presidencial</text>
-
-          <!-- Curly brace style for candidates -->
-          <path d="M20,60 q20,-20 40,0 q-20,20 0,40 q-20,20 0,40 q-20,20 0,40 q-20,20 40,0" fill="none" stroke="currentColor" stroke-width="2" />
-          <text x="30" y="130" transform="rotate(-90,30,130)" font-size="12">Candidatos</text>
-
-          <!-- Rodrigo Paz -->
-          <g transform="translate(70,60)">
-            <rect width="280" height="150" rx="12" fill="#f0f9ff" stroke="currentColor" />
-            <text x="140" y="24" text-anchor="middle" font-size="16">Rodrigo Paz</text>
-            <text x="14" y="50" font-size="13">• Descentralización fiscal</text>
-            <text x="14" y="72" font-size="13">• Bajar aranceles</text>
-            <text x="14" y="94" font-size="13">• Amnistía fiscal</text>
-            <text x="14" y="116" font-size="13">• Crecimiento para reducir déficit</text>
-          </g>
-
-          <!-- Jorge Quiroga -->
-          <g transform="translate(380,60)">
-            <rect width="280" height="150" rx="12" fill="#fef3c7" stroke="currentColor" />
-            <text x="140" y="24" text-anchor="middle" font-size="16">Jorge Quiroga</text>
-            <text x="14" y="50" font-size="13">• Recorte del gasto público</text>
-            <text x="14" y="72" font-size="13">• Apertura comercial amplia</text>
-            <text x="14" y="94" font-size="13">• Posible salida de Mercosur</text>
-            <text x="14" y="116" font-size="13">• Privatizaciones (acciones a ciudadanos)</text>
-          </g>
-        </g>
-
-        <!-- Flecha Congreso -> Segunda vuelta -->
-        <path d="M 990 230 L 990 320" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)" />
-
-        <!-- Bloque: Conclusión/Oportunidad -->
-        <g transform="translate(60,540)">
-          <rect width="820" height="180" rx="14" fill="#ecfeff" stroke="currentColor" filter="url(#shadow)" />
-          <text x="410" y="32" text-anchor="middle" font-size="18">Conclusión</text>
-          <text x="20" y="70" font-size="14">• Oportunidad histórica para desmontar el modelo intervencionista y clientelar</text>
-          <text x="20" y="95" font-size="14">• Modernización posible si la oposición se coordina</text>
-          <text x="20" y="120" font-size="14">• Si fracasan, la izquierda radical puede volver con fuerza</text>
-        </g>
-
-        <!-- Llave grande que agrupa causas -> resultado (curly brace) -->
-        <path d="M420,90 q20,-20 40,0 q-20,20 0,40 q-20,20 0,40 q-20,20 0,40 q-20,20 40,0" fill="none" stroke="currentColor" stroke-width="2" />
-        <text x="438" y="180" transform="rotate(-90,438,180)" font-size="12">De causas a resultados</text>
-
-      </svg>
-      <div class="legend" aria-hidden="true">
-        <span><span class="dot info"></span> Información</span>
-        <span><span class="dot warn"></span> Propuestas</span>
-        <span><span class="dot ok"></span> Oportunidades</span>
-        <span><span class="dot danger"></span> Riesgos</span>
-      </div>
-    </section>
-
-    <!-- Esquema en texto (plegable por secciones) -->
-    <section class="card hidden" id="panel-esquema" role="tabpanel" aria-labelledby="tab-esquema">
-      <details open>
-        <summary><span class="chev">▶</span> Caída del MAS</summary>
-        <ul>
-          <li>20 años en el poder (Evo Morales + Luis Arce).</li>
-          <li>Crisis económica:
-            <ul>
-              <li>Déficit 14%</li>
-              <li>Inflación 25%</li>
-              <li>Escasez de alimentos y combustibles</li>
-            </ul>
-          </li>
-          <li>División interna: Morales vs. Arce.</li>
-          <li>Resultados:
-            <ul>
-              <li>MAS: 3,2% votos (de 75 diputados → 1).</li>
-              <li>Alianza Popular: 8,2% + 5 diputados.</li>
-              <li>Voto nulo impulsado por Evo: 20%.</li>
-            </ul>
-          </li>
-          <li>Base de izquierda radical ≈ 30% (fragmentada).</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><span class="chev">▶</span> Consecuencias políticas</summary>
-        <ul>
-          <li>4 fuerzas no de izquierda ≈ 90% del Congreso.</li>
-          <li>Capacidad de reformar la Constitución.</li>
-          <li>Irrelevancia política de la izquierda en estas elecciones.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><span class="chev">▶</span> Segunda vuelta</summary>
-        <h3>Rodrigo Paz</h3>
-        <ul>
-          <li>Descentralización fiscal (provincias y universidades).</li>
-          <li>Bajar aranceles.</li>
-          <li>Amnistía fiscal + crecimiento para reducir déficit.</li>
-        </ul>
-        <h3>Jorge Quiroga</h3>
-        <ul>
-          <li>Recorte directo del gasto público.</li>
-          <li>Apertura comercial amplia (posible salida del Mercosur).</li>
-          <li>Privatizaciones (acciones a ciudadanos).</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><span class="chev">▶</span> Conclusión</summary>
-        <ul>
-          <li>Oportunidad histórica de modernización si hay coordinación.</li>
-          <li>Si la oposición fracasa, puede volver la izquierda radical.</li>
-        </ul>
-      </details>
-    </section>
-  </div>
-
-  <footer>
-    © 2025 Hecho para estudio y visualización.
+  </main>  <footer>
+    <p>&copy; 2025 Análisis Político | Datos basados en resultados oficiales y reportes periodísticos</p>
   </footer>
-
-  <script>
-    // Tabs
-    const tabDiag = document.getElementById('tab-diagrama');
-    const tabEsq = document.getElementById('tab-esquema');
-    const panelDiag = document.getElementById('panel-diagrama');
-    const panelEsq = document.getElementById('panel-esquema');
-
-    function setTab(diagrama){
-      const isDiag = !!diagrama;
-      tabDiag.setAttribute('aria-pressed', isDiag);
-      tabDiag.setAttribute('aria-selected', isDiag);
-      tabEsq.setAttribute('aria-pressed', !isDiag);
-      tabEsq.setAttribute('aria-selected', !isDiag);
-      panelDiag.classList.toggle('hidden', !isDiag);
-      panelEsq.classList.toggle('hidden', isDiag);
-    }
-    tabDiag.addEventListener('click', () => setTab(true));
-    tabEsq.addEventListener('click', () => setTab(false));
-
-    // Details chevrons
-    document.querySelectorAll('details > summary').forEach(s => {
-      s.addEventListener('click', (e) => {
-        const chev = s.querySelector('.chev');
-        setTimeout(()=>{
-          if (s.open) { chev.classList.add('rot'); }
-          else { chev.classList.remove('rot'); }
-        }, 0);
-      });
-    });
-
-    // Initialize chevrons for open details
-    document.querySelectorAll('details[open] > summary .chev').forEach(c => c.classList.add('rot'));
-  </script>
 </body>
 </html>
